@@ -9,7 +9,7 @@ client.on('message', message => {
     if (message.content === 'teston') {
     	message.reply('I am alive.');
   	}else if(message.content == 'qwerty'){
-        message.reply('Are you on your keyboard?);
+        message.reply('Are you on your keyboard?');
     }
 });
 
