@@ -9,6 +9,7 @@ client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
   	}
+});
  client.on('message', message => {
     if (message.content === 'test') {
     	message.reply('Yes, I\'m still alive.');
