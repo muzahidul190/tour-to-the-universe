@@ -10,11 +10,6 @@ client.on('message', message => {
     	message.reply('pong');
   	}
 });
- client.on('message', message => {
-    if (message.content === 'test') {
-    	message.reply('Yes, I\'m still alive.');
-}
-});
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
