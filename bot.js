@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('&{bot.user.username} is online.');
-    bot.user.setGame("Getting Constructed\!");
+    bot.user.setGame("Getting Constructed.");
 });
 
 client.on('message', message => {
