@@ -14,7 +14,7 @@ bot.on('message', async message => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
     
-    if (cmd === 'hrn') {
+    if (cmd === 'uhrn') {
         return message.channel.send('I am alive.');  	
     }else if(cmd == 'qwerty'){
         return message.reply('Are you on your keyboard?');
@@ -25,7 +25,7 @@ bot.on('message', async message => {
        .setDescription("Still Getting Constructed.")
        .setColor("#ffa500")
        .setField("Bot Name: ", bot.user.username);
-        return message.channel.send(botembed);
+        return message.channel.send('botembed');
     }
 });
 
