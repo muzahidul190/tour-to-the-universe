@@ -14,12 +14,12 @@ bot.on('message', async message => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
     
-    if (cmd === 'vern') {
-    	message.channel.send('I am alive.');  	
+    if (cmd === 'varn') {
+        return message.channel.send('I am alive.');  	
     }else if(cmd == 'qwerty'){
-        message.reply('Are you on your keyboard?');
+        return message.reply('Are you on your keyboard?');
     }else if(cmd == 'invite'){
-        message.channel.send('Invitatin link is https://discord.gg/crtrH5y');
+        return message.channel.send('Invitatin link is https://discord.gg/crtrH5y');
     }
 });
 
