@@ -36,6 +36,14 @@ bot.on('message', async message => {
         return message.channel.send(info);
     }
 });
+module.exports.run = async (bot, message, args) => {
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply('Oops, you dont have permission.');
+    if(!args[0]) return message.channel.send('Oops!');
+    message.channel.bulkDelete(args[0]);
+}
+module.exports.help = {
+    name: "clr"
+}
 
 // THIS  MUST  BE  THIS  WAY
 bot.login(process.env.BOT_TOKEN);
