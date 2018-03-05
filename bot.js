@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const sgbot = new Discord.Client();
 
-client.on('ready', () => {
+sgbot.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
+sgbot.on('message', message => {
     if (message.content === 'teston') {
     	message.channel.send('I am alive.');  	
     }else if(message.content == 'qwerty'){
@@ -16,4 +16,4 @@ client.on('message', message => {
 });
 
 // THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
+sgbot.login(process.env.BOT_TOKEN);
