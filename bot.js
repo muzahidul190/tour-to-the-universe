@@ -23,6 +23,7 @@ bot.on('message', async message => {
         return message.reply('Are you on your keyboard?');
     }
     if(cmd === 'clr'){
+        if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply('Sorry, you do not have permission.');
         message.channel.bulkDelete(3).then(() => {
             message.channel.sendMessage('3 messages deleted.').then(message => message.delete(5000));
         });
