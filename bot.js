@@ -6,8 +6,8 @@ sgbot.on('ready', async () => {
     bot.user.setGame("Getting Constructed");
 });
 
-sgbot.on('message', message => {
-    if (message.content === 'teston') {
+sgbot.on('message', async message => {
+    if (message.content === 'testn') {
     	message.channel.send('I am alive.');  	
     }else if(message.content == 'qwerty'){
         message.reply('Are you on your keyboard?');
