@@ -29,7 +29,7 @@ bot.on('message', async message => {
         });
     }
     if(cmd == 'invite'){
-        return message.channel.send('Invitatin link is https://discord.gg/crtrH5y');
+        return message.channel.send('Invitation link is https://discord.gg/crtrH5y');
     }
     if(cmd == 'help'){
         return message.channel.send('<@325510053970837505> is still constructing me. ``Help`` menu will be added **soon**.');
