@@ -1,8 +1,9 @@
 const Discord = require('discord.js');
 const sgbot = new Discord.Client({disableEveryone: true});
 
-sgbot.on('ready', () => {
+sgbot.on('ready', async () => {
     console.log('I am ready!');
+    bot.user.setGame("Getting Constructed");
 });
 
 sgbot.on('message', message => {
