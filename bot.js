@@ -3,7 +3,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on('ready', async () => {
     console.log('I am ready!');
-    bot.user.setActivity("Getting Constructed", {type: "BUSY"});
+    bot.user.setActivity("Getting Constructed", {type: "WATCHING"});
 });
 
 bot.on('message', async message => {
@@ -23,7 +23,7 @@ bot.on('message', async message => {
         return message.reply('Are you on your keyboard?');
     }
     if(cmd === 'bname'){
-        return message.channel.send('My name is ${bot.user.username}');
+        return message.channel.send('My name is {bot.user.username}');
     }
     if(cmd == 'invite'){
         return message.channel.send('Invitatin link is https://discord.gg/crtrH5y');
