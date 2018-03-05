@@ -3,7 +3,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on('ready', async () => {
     console.log('I am ready!');
-    bot.setGame('Getting Constructed', 'youtube');
+    bot.user.setActivity("Getting Constructed", {type: "BUSY"});
 });
 
 bot.on('message', async message => {
