@@ -16,8 +16,8 @@ bot.on('message', async message => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
     
-    if (cmd === 'fhrn') {
-        return message.channel.send('I am alive.');  	
+    if (cmd === 'frn') {
+        return message.channel.sendMessage('I am alive.');  	
     }
     if(cmd == 'qwerty'){
         return message.reply('Are you on your keyboard?');
