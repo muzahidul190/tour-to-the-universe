@@ -9,7 +9,7 @@ bot.on('ready', async () => {
 bot.on('message', async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm"){
-        return message.reply('Don\'t DM me now. I\'m still a kid.');
+        return message.reply('Don\'t DM me now. I\'m still a kid :cold_sweat:');
     }
     
     let messageArray = message.content.split(" ");
