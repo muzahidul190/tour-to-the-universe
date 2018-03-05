@@ -8,7 +8,9 @@ bot.on('ready', async () => {
 
 bot.on('message', async message => {
     if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
+    if(message.channel.type === "dm"){
+        return message.reply('Don\'t DM me now. I\'m still a kid.');
+    }
     
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
@@ -24,11 +26,11 @@ bot.on('message', async message => {
         return message.channel.send('Invitatin link is https://discord.gg/crtrH5y');
     }
     if(cmd === 'botinfo'){
-        /*let info = new Discord.RichEmbed()
+        let info = new Discord.RichEmbed()
        .setDescription("Still Getting Constructed.")
        .setColor("#ffa500")
-       .setField("Bot Name: ", bot.user.username);*/
-        return message.channel.send('info');
+       .setField("Bot Name: ", bot.user.username);
+        return message.channel.send(info);
     }
 });
 
