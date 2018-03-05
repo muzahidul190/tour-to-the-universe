@@ -7,10 +7,11 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === 'teston') {
-    	message.reply('I am alive.');  	}else if(message.content == 'qwerty'){
+    	message.channel.send('I am alive.');  	
+    }else if(message.content == 'qwerty'){
         message.reply('Are you on your keyboard?');
     }else if(message.content == 'invite'){
-        message.reply('Invitatin link is https://discord.gg/crtrH5y');
+        message.channel.send('Invitatin link is https://discord.gg/crtrH5y');
     }
 });
 
