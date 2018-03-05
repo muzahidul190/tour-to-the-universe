@@ -3,7 +3,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on('ready', async () => {
     console.log('I am ready!');
-    bot.user.setGame("Getting Constructed");
+    bot.setGame("Getting Constructed");
 });
 
 bot.on('message', async message => {
@@ -29,7 +29,7 @@ bot.on('message', async message => {
         let info = new Discord.RichEmbed()
        .setDescription("Still Getting Constructed.")
        .setColor("#ffa500")
-       .setField("Bot Name: ", bot.user.username);
+       .setField("Bot Name: ", bot.username);
         return message.channel.send(info);
     }
 });
