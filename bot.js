@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on('ready', async () => {
+client.on('ready', () => {
     console.log('&{bot.user.username} is online.');
-    bot.user.setGame("Getting Constructed!!!");
+    bot.user.setGame("Getting Constructed\!");
 });
 
 client.on('message', message => {
-    if (message.content === 'teston') {
+    if (message.content === 'testn') {
     	message.channel.send('I am alive.');
   	}else if(message.content == 'qwerty'){
         message.reply('Are you on your keyboard?');
