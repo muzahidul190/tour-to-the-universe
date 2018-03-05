@@ -20,6 +20,8 @@ bot.on('message', async message => {
         return message.reply('Are you on your keyboard?');
     }else if(cmd == 'invite'){
         return message.channel.send('Invitatin link is https://discord.gg/crtrH5y');
+    }else if(cmd == '!build'){
+        bot.user.setGame('Getting Constructed.');
     }
 });
 
