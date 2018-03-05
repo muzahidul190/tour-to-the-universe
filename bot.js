@@ -7,7 +7,14 @@ bot.on('ready', async () => {
 });
 
 bot.on('message', async message => {
-    if (message.content === 'testn') {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+    
+    let messageArray = message.content.split(" ");
+    let cmd = messageArray[0];
+    let args = messageArray.slice(1);
+    
+    if (cmd === 'testn') {
     	message.channel.send('I am alive.');  	
     }else if(message.content == 'qwerty'){
         message.reply('Are you on your keyboard?');
