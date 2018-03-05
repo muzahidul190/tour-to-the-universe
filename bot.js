@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const sgbot = new Discord.Client();
+const sgbot = new Discord.Client({disableEveryone: true});
 
 sgbot.on('ready', () => {
     console.log('I am ready!');
