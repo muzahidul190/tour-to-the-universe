@@ -14,18 +14,21 @@ bot.on('message', async message => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
     
-    if (cmd === 'uhrn') {
+    if (cmd === 'fhrn') {
         return message.channel.send('I am alive.');  	
-    }else if(cmd == 'qwerty'){
+    }
+    if(cmd == 'qwerty'){
         return message.reply('Are you on your keyboard?');
-    }else if(cmd == 'invite'){
+    }
+    if(cmd == 'invite'){
         return message.channel.send('Invitatin link is https://discord.gg/crtrH5y');
-    }else if(cmd == 'botinfo'){
-        let botembed = new Discord.RichEmbed()
+    }
+    if(cmd === 'botinfo'){
+        let info = new Discord.RichEmbed()
        .setDescription("Still Getting Constructed.")
        .setColor("#ffa500")
        .setField("Bot Name: ", bot.user.username);
-        return message.channel.send('botembed');
+        return message.channel.send('info');
     }
 });
 
