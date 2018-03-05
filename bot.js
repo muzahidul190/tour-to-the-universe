@@ -14,14 +14,14 @@ bot.on('message', async message => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
     
-    if (cmd === 'vorn') {
+    if (cmd === 'torn') {
         return message.channel.send('I am alive.');  	
     }else if(cmd == 'qwerty'){
         return message.reply('Are you on your keyboard?');
     }else if(cmd == 'invite'){
         return message.channel.send('Invitatin link is https://discord.gg/crtrH5y');
-    }else if(cmd == 'ild'){
-        bot.user.setGame('Getting Constructed.');
+    }else if(cmd == 'mld'){
+        bot.user.setGame("Getting Constructed.");
     }
 });
 
