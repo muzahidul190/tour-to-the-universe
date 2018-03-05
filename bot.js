@@ -23,7 +23,9 @@ bot.on('message', async message => {
         return message.reply('Are you on your keyboard?');
     }
     if(cmd === 'clr'){
-        message.channel.bulkDelete(2);
+        message.channel.bulkDelete(3).then(() => {
+            message.channel.sendMessage('3 messages deleted.').then(message => message.delete(5000));
+        });
     }
     if(cmd == 'invite'){
         return message.channel.send('Invitatin link is https://discord.gg/crtrH5y');
