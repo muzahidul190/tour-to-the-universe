@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
-const sgbot = new Discord.Client({disableEveryone: true});
+const bot = new Discord.Client({disableEveryone: true});
 
-sgbot.on('ready', async () => {
+bot.on('ready', async () => {
     console.log('I am ready!');
     bot.user.setGame("Getting Constructed");
 });
 
-sgbot.on('message', async message => {
+bot.on('message', async message => {
     if (message.content === 'testn') {
     	message.channel.send('I am alive.');  	
     }else if(message.content == 'qwerty'){
@@ -17,4 +17,4 @@ sgbot.on('message', async message => {
 });
 
 // THIS  MUST  BE  THIS  WAY
-sgbot.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
