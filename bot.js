@@ -22,8 +22,8 @@ bot.on('message', async message => {
     if(cmd == 'qwerty'){
         return message.reply('Are you on your keyboard?');
     }
-    if(cmd === 'bname'){
-        return message.channel.send('My name is');
+    if(cmd === 'clr'){
+        message.channel.bulkDelete(args[2]);
     }
     if(cmd == 'invite'){
         return message.channel.send('Invitatin link is https://discord.gg/crtrH5y');
