@@ -5,7 +5,7 @@ const emojis = require("discord.js");
 /*
 
 
-
+1⃣ 
 
 
 
